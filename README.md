@@ -1,4 +1,13 @@
 # gRodon_analysis
+
+My process:
+1. The first thing is to take reads and then make it megahit for assembly. Malte has done this so I won't. Need confirmations.
+2. Do gene calls. Here is where things get tricky. Now, Either I use the prokka anaylsis pipeline or the prodigal pipeline. I believe the gene calls are from the prodigal here for the contigs. Then I can do blast.Need careful consideration because I would rather safe my head and confirmation from malte. I could also talk to Lucas about clarifications.
+3.Then once I have the regions,I would still need to do my read files.The clean read files will be mapped to genes and I get relative coverage abunance tvs. I need to understand that bit more. 
+4. Run growthpred. it seems 1 core, should be enough. just make sure I can write a script for submitting.
+5. Get the results. 
+6. Then I do my analysis.
+
 #Infornation dump :
 Users should be cutious when interpreting results for organisms with predicted doubling times greater than 5 hours -point noted
 First thing is t figure out, where the gene calls are from. If they are from the whole contigs I am great.
@@ -14,6 +23,7 @@ Number of cores required:
 
 Cores
 =Total time /Available time = 114,000/259,200≈ 0.44.
+
 temparature is an optional predictor here. we dont know temparature or we can chck as well.Dont know what would be great here 
 Temperature as a Variable: If you have information on the optimal growth temperatures of the microbial species present in your samples or if you can estimate the environmental temperatures during sample collection, consider including this as a variable in your analysis. This can enhance the accuracy of your growth rate predictions.
 
@@ -43,7 +53,7 @@ option –training-ﬁle illumina_5 [50, 51]). For assemblies, cleaned reads wer
 bwa mem v0.7.12 (default settings [48]), and coverage was quantiﬁed using bamcov v0.1.1 (available at
 https://github.com/fbreitwieser/bamcov). We annotated genes called directly from reads as ribosomal pro-
 teins using blastn (E value cutoff of 1025 and a 99% identity [52]) and the ribosomal protein database from
-growthpred (13). The sets of genes predicted directly from reads were very large (160 million genes on aver-
+growthpred (13). The sets of genes predicted directly from reads were very large (160 million genes on average-
 age), so that we subsampled 1% of genes per sample for gRodon prediction (increasing this to 10% did not
 change our result; see Fig. S21 at https://doi.org/10.6084/m9.ﬁgshare.20440377.v1).
 
