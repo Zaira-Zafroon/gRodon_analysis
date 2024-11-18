@@ -2,11 +2,14 @@
 
 My process:
 1. The first thing is to take reads and then make it megahit for assembly. Malte has done this so I won't. Need confirmations.
+
 2. Do gene calls. Here is where things get tricky. Now, Either I use the prokka anaylsis pipeline or the prodigal pipeline. I believe the gene calls are from the prodigal here for the contigs. Then I can do blast.Need careful consideration because I would rather safe my head and confirmation from malte. I could also talk to Lucas about clarifications.
+
 3.Then once I have the regions,I would still need to do my read files.The clean read files will be mapped to genes and I get relative coverage abunance tvs. I need to understand that bit more. 
-4. Run growthpred. it seems 1 core, should be enough. just make sure I can write a script for submitting.
+4. Run gRodon 2. it seems 1 core, should be enough. just make sure I can write a script for submitting.
 5. Get the results. 
 6. Then I do my analysis.
+7.Cross validate with growthpred.
 
 #Infornation dump :
 Users should be cutious when interpreting results for organisms with predicted doubling times greater than 5 hours -point noted
