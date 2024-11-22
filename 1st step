@@ -12,3 +12,5 @@ tar -xzvf originalataset_ribproteins.tar.gz
 
 step 3:rename files .fasta files
 for file in *.txt; do     mv "$file" "${file%.txt}.fasta"; done
+
+ste4: cat /work_beegfs/sukmb625/gRodon_analysis/ribosomal_db/RibosomalProteins_GrowthPred/*.fasta > /work_beegfs/sukmb625/gRodon_analysis/ribosomal_db/combined_ribosomal_proteins.fasta
