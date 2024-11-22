@@ -61,3 +61,6 @@ age), so that we subsampled 1% of genes per sample for gRodon prediction (increa
 change our result; see Fig. S21 at https://doi.org/10.6084/m9.ﬁgshare.20440377.v1).
 
 
+Raw reads and assemblies for the HSASM data set (8) were obtained from https://www.hmpdacc.org/hmp/HMASM/#data, and sample temperature was assumed to be 37°C. Assemblies were annotated with prokka (using options --norrna --notrna --metagenome --centre X --compliant [46]). For reads, adapters and low-quality reads were trimmed using fastp v0.21.0 (47), and then cleaned reads were mapped to inferred genes using bwa mem v0.7.12 (default settings [48]) and coverage was quantified using bamcov v0.1.1 (available at https://github.com/fbreitwieser/bamcov).
+
+
