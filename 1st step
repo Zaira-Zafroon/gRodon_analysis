@@ -1,0 +1,14 @@
+This is the part of the study where I am creating the ribosomal database to identify highly expressed genes in my sample.
+Because we have the gene _calls from Malte. So, now I am following this steps from the main vignette
+"If you have unannotated CDS (e.g., from [prodigal](https://github.com/hyattpd/Prodigal)),
+you might consider simply BLASTing your output for highly expressed genes (e.g., using
+the blastdb  of ribosomal proteins included in [growthpred](http://ftp.pasteur.fr/pub/gensoft/projects/growthpred/)).*"
+
+step 1:Download the zipped ribosomal protein file
+ wget http://ftp.pasteur.fr/pub/gensoft/projects/growthpred/originalataset_ribproteins.tar.gz
+
+step 2:unzip it
+tar -xzvf originalataset_ribproteins.tar.gz
+
+step 3:rename files .fasta files
+for file in *.txt; do     mv "$file" "${file%.txt}.fasta"; done
